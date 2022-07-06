@@ -20,6 +20,12 @@ node() {
             println("Branch: ${BRANCH}")
             println("Git Tag: ${GIT_TAG}")
             println("Git TAG_NAME: ${env.TAG_NAME}")
+
+            if (( env.TAG_NAME )) {
+                println("Git tag discovered: ${env.TAG_NAME}")
+            } else {
+                println("No git tags found")
+            }
             
         }
     } catch (ex) {
